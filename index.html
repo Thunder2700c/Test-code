@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gradual Blur</title>
+  <link rel="stylesheet" href="gradual-blur.css">
+</head>
+<body>
+  <!-- Example usage -->
+  <div class="demo-container" style="position: relative; height: 100vh; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+    <div id="gradual-blur-1"></div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.11.0/math.min.js"></script>
+  <script src="gradual-blur.js"></script>
+  <script>
+    // Initialize the blur effect
+    new GradualBlur('#gradual-blur-1', {
+      position: 'bottom',
+      strength: 2,
+      height: '6rem',
+      preset: 'footer'
+    });
+  </script>
+</body>
+</html>
